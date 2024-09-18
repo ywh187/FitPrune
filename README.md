@@ -20,8 +20,8 @@ We will release the code and data in the following stages:
 ## Demos
 Here are some example results showing the pruning efficiency with different compression rates on LLaVA1.5:
 
-<video width="95%" controls>
-  <source src="figure/example.mpg" type="video/mp4">
+<video width="100%" controls>
+  <source src="figure/example.mp4" type="video/mp4">
 </video>
 
 
