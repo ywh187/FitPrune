@@ -21,7 +21,7 @@ We will release the code and data in the following stages:
 Here are some example results showing the pruning efficiency with different compression rates on LLaVA1.5:
 
 <video width="100%" controls>
-  <source src="figure/example.mp4" type="video/mp4">
+  <source src="https://github.com/ywh187/FitPrune/blob/main/figure/example.mp4" type="video/mp4">
 </video>
 
 
