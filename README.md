@@ -32,8 +32,8 @@ Here are some example results showing the pruning efficiency with different comp
 ### Environment Setup
 
 ```bash
-git  clone -b v1.1.3 https://github.com/haotian-liu/LLaVA.git  FitPrune_LLaVA1.5
-cd FitPrune_LLaVA1.5
+git clone https://github.com/ywh187/FitPrune.git
+cd FitPrune/LLaVA_1.5
 
 conda create -n llava python=3.10 -y
 conda activate llava
