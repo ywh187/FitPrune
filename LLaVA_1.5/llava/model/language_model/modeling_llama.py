@@ -406,11 +406,10 @@ class LlamaAttention(nn.Module):
                     q_len = attn_output.shape[2]
 
                 else:
-                    # 搞一个全为1的tensor
                     topk_idx = torch.ones(attn_weights.shape[3], dtype=torch.bool, device=attn_weights.device)
 
 
-        else: # 只有一行的情况
+        else: 
             topk_idx = 1
 
         #######################
