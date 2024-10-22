@@ -61,13 +61,12 @@ CUDA_VISIBLE_DEVICES=0 python llava/eval/statistical_analysis.py --model-path li
 ```
 
 Here, `./llava/eval/statistical_analysis_data.jsonl` serves as an example of the statistical data; you can replace it with your own dataset following the same structure. The `image-folder` parameter specifies the directory containing your images.
+
+
 ```
-
-
-
 ## Citation
 
-If you find **FitPrune** useful, please kindly cite our paper:
+If you find **FitPrune** useful, please kindly cite our paper. Thank you!
 
 ```bibtex
 @article{fitprune2024,
