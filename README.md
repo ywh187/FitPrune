@@ -32,76 +32,86 @@ Here are some example results showing the pruning efficiency with different comp
 
 
 
-## Usage 
 
-### Environment Setup for LLaVA 1.5
 
-1. Navigate to the directory:
+## Usage  
+
+
+### 1️⃣ LLaVA 1.5  
+
+#### Environment Setup  
+
+1. Navigate to the directory:  
 
    ```bash
    cd LLaVA_1.5
-   ```
+   ```  
 
-2. Follow the instructions in `LLaVA_1.5/README.md` to set up the environment.
+2. Follow the instructions in `LLaVA_1.5/README.md` to set up the environment.  
 
-### Run Inference with FitPrune on LLaVA 1.5
+#### Run Inference  
 
 ```bash
 # example
 # adjust the --reduction_ratio parameter to control the token pruning rate
 bash scripts/v1_5/eval/textvqa.sh
-```
+```  
 
-### Statistical Analysis
+#### Statistical Analysis  
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python llava/eval/statistical_analysis.py --model-path liuhaotian/llava-v1.5-7b --question-file ./llava/eval/statistical_analysis_data.jsonl --image-folder /data/LLaVA/data/ --reduction_ratio 0.6
-```
+```  
 
-- Replace `./llava/eval/statistical_analysis_data.jsonl` with your dataset following the same structure.
-- Set `image-folder` to the directory containing your images.
+- Replace `./llava/eval/statistical_analysis_data.jsonl` with your dataset following the same structure.  
+- Set `image-folder` to the directory containing your images.  
 
 ---
 
-### Environment Setup for LLaVA-HR
+### 2️⃣ LLaVA-HR  
 
-1. Navigate to the directory:
+#### Environment Setup  
+
+1. Navigate to the directory:  
 
    ```bash
    cd LLaVA_HR
-   ```
+   ```  
 
-2. Follow the instructions in `LLaVA_HR/README.md` to set up the environment.
+2. Follow the instructions in `LLaVA_HR/README.md` to set up the environment.  
 
-### Run Inference with FitPrune on LLaVA-HR
+#### Run Inference  
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 bash scripts/v1_5/eval_full/textvqa.sh /path/to/llava-hr-7b-sft-1024
-```
+```  
 
-- Use the `--reduction_ratio` parameter in the script to control the token pruning rate.
-- The main FitPrune modifications are in `llava_hr/model/language_model/modeling_llama.py`.
+- Use the `--reduction_ratio` parameter in the script to control the token pruning rate.  
+- The main FitPrune modifications are in `llava_hr/model/language_model/modeling_llama.py`.  
 
 ---
 
-### Environment Setup for LLaVA-Next
+### 3️⃣ LLaVA-Next  
 
-1. Navigate to the directory:
+#### Environment Setup  
+
+1. Navigate to the directory:  
 
    ```bash
    cd LLaVA_NEXT
-   ```
+   ```  
 
-2. Follow the instructions in `LLaVA_NEXT/README.md` to set up the environment.
+2. Follow the instructions in `LLaVA_NEXT/README.md` to set up the environment.  
 
-### Run Inference with FitPrune on LLaVA-Next
+#### Run Inference  
 
 ```bash
 bash scripts/v1_5/eval/textvqa.sh
-```
+```  
 
-- Use the `--reduction_ratio` parameter in the script to control the token pruning rate.
-- The main FitPrune modifications are in `llava/model/language_model/modeling_llama.py`.
+- Use the `--reduction_ratio` parameter in the script to control the token pruning rate.  
+- The main FitPrune modifications are in `llava/model/language_model/modeling_llama.py`.  
+
 
 
 
