@@ -7,8 +7,8 @@
 We introduce **FitPrune**, a method that generates an efficient token pruning strategy for multi-modal large language models (MLLMs) by removing redundant visual tokens. FitPrune is easy to deploy and designed to meet a predefined computational budget while maintaining model performance.
 
 ## News
-- **[2024/09/16]** Inference acceleration code for **LLaVA 1.5** is now released!
-- **[2024/10/22]** Statistical analysis code for **LLaVA 1.5** is now released!
+- **[2024/09/16]** Inference acceleration code for **LLaVA** is now released!
+- **[2024/10/22]** Statistical analysis code for **LLaVA** is now released!
 - **[2024/12/10]** Our paper **FitPrune** has been accepted to **AAAI 2025**! 🎉 
 
 ## TODOs
