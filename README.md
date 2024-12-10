@@ -9,6 +9,7 @@ We introduce **FitPrune**, a method that generates an efficient token pruning st
 ## News
 - **[2024/09/16]** Inference acceleration code for **LLaVA 1.5** is now released!
 - **[2024/10/22]** Statistical analysis code for **LLaVA 1.5** is now released!
+- **[2024/12/10]** Our paper **FitPrune** has been accepted to **AAAI 2025**! 🎉 
 
 ## TODOs
 
@@ -16,7 +17,7 @@ We will release the code and data in the following stages:
 
 - [x] Release inference acceleration code for **LLaVA 1.5**.
 - [x] Release statistical analysis scripts.
-- [ ] Release inference acceleration code for **LLaVA Next** and **LLaVA-HR**.
+- [x] Release inference acceleration code for **LLaVA Next** and **LLaVA-HR**.
 
 
 ## Demos
@@ -30,43 +31,83 @@ Here are some example results showing the pruning efficiency with different comp
 </p>
 
 
-## Usage(LLaVA1.5)
 
-### Environment Setup
+## Usage 
 
-```bash
-git  clone -b v1.1.3 https://github.com/haotian-liu/LLaVA.git  FitPrune_LLaVA1.5
-cd FitPrune_LLaVA1.5
+### Environment Setup for LLaVA 1.5
 
-conda create -n llava python=3.10 -y
-conda activate llava
-pip install --upgrade pip  # enable PEP 660 support
-pip install -e .
-```
+1. Navigate to the directory:
+
+   ```bash
+   cd LLaVA_1.5
+   ```
+
+2. Follow the instructions in `LLaVA_1.5/README.md` to set up the environment.
 
 ### Run Inference with FitPrune on LLaVA 1.5
 
 ```bash
 # example
-# adjust the reduction_ratio parameter to control the token pruning rate
-bash scripts/v1_5/eval/textvqa.sh  
+# adjust the --reduction_ratio parameter to control the token pruning rate
+bash scripts/v1_5/eval/textvqa.sh
 ```
 
 ### Statistical Analysis
-
-To perform statistical analysis, run the following command:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python llava/eval/statistical_analysis.py --model-path liuhaotian/llava-v1.5-7b --question-file ./llava/eval/statistical_analysis_data.jsonl --image-folder /data/LLaVA/data/ --reduction_ratio 0.6
 ```
 
-Here, `./llava/eval/statistical_analysis_data.jsonl` serves as an example of the statistical data; you can replace it with your own dataset following the same structure. The `image-folder` parameter specifies the directory containing your images.
+- Replace `./llava/eval/statistical_analysis_data.jsonl` with your dataset following the same structure.
+- Set `image-folder` to the directory containing your images.
 
+---
 
+### Environment Setup for LLaVA-HR
+
+1. Navigate to the directory:
+
+   ```bash
+   cd LLaVA_HR
+   ```
+
+2. Follow the instructions in `LLaVA_HR/README.md` to set up the environment.
+
+### Run Inference with FitPrune on LLaVA-HR
+
+```bash
+CUDA_VISIBLE_DEVICES=0 bash scripts/v1_5/eval_full/textvqa.sh /path/to/llava-hr-7b-sft-1024
 ```
+
+- Use the `--reduction_ratio` parameter in the script to control the token pruning rate.
+- The main FitPrune modifications are in `llava_hr/model/language_model/modeling_llama.py`.
+
+---
+
+### Environment Setup for LLaVA-Next
+
+1. Navigate to the directory:
+
+   ```bash
+   cd LLaVA_NEXT
+   ```
+
+2. Follow the instructions in `LLaVA_NEXT/README.md` to set up the environment.
+
+### Run Inference with FitPrune on LLaVA-Next
+
+```bash
+bash scripts/v1_5/eval/textvqa.sh
+```
+
+- Use the `--reduction_ratio` parameter in the script to control the token pruning rate.
+- The main FitPrune modifications are in `llava/model/language_model/modeling_llama.py`.
+
+
+
 ## Citation
 
-If you find **FitPrune** useful, please kindly cite our paper. Thank you!
+If you find FitPrune useful, please kindly cite our paper. Thank you!
 
 ```bibtex
 @article{fitprune2024,
