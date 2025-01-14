@@ -1,5 +1,5 @@
 # Fit and Prune: Fast and Training-free Visual Token Pruning for Multi-modal Large Language Models  
-[[paper](https://arxiv.org/abs/2409.10197)]
+[[paper](https://arxiv.org/abs/2409.10197v2)]
 
 <img src="figure/main.png" alt="main_image" width="95%">
 
