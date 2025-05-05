@@ -120,10 +120,13 @@ bash scripts/v1_5/eval/textvqa.sh
 If you find FitPrune useful, please kindly cite our paper. Thank you!
 
 ```bibtex
-@article{fitprune2024,
-        title={Fit and Prune: Fast and Training-free Visual Token Pruning for Multi-modal Large Language Models},
-        author={Weihao Ye, Qiong Wu, Wenhao Lin, Yiyi Zhou},
-        journal={arXiv preprint arXiv:2409.10197},
-        year={2024}
+@inproceedings{ye2025fit,
+  title={Fit and prune: Fast and training-free visual token pruning for multi-modal large language models},
+  author={Ye, Weihao and Wu, Qiong and Lin, Wenhao and Zhou, Yiyi},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={39},
+  number={21},
+  pages={22128--22136},
+  year={2025}
 }
 ```
