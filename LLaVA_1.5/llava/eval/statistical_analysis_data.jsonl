@@ -1,0 +1,5 @@
+{"question_id": "000000331386", "image": "coco/train2017/000000331386.jpg", "text": "What country are these people in?\nA. united kingdom\nB. italy\nC. germany\nD. france\nAnswer with the option's letter from the given choices directly.", "category": "default"}
+{"question_id": "2318749", "image": "gqa/images/2318749.jpg", "text": "Is the house on the left side or on the right?\nAnswer the question using a single word or phrase.", "category": "default"}
+{"question_id": "000000142771", "image": "coco/train2017/000000142771.jpg", "text": "Please provide a short description for this region: [0.32, 0.06, 0.67, 0.97].", "category": "default"}
+{"question_id": "2339468", "image": "gqa/images/2339468.jpg", "text": "What is the person to the right of the people holding?\nAnswer the question using a single word or phrase.", "category": "default"}
+{"question_id": "8283ca3a900404f0", "image": "textvqa/train_images/8283ca3a900404f0.jpg", "text": "Provide a one-sentence caption for the provided image.\nReference OCR token: NIRW", "category": "default"}
